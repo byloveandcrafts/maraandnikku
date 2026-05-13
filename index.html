@@ -648,22 +648,10 @@
       background-position: center;
       opacity: 0;
       transition: opacity 2s ease-in-out;
-      transform: scale(1.04);
     }
 
     .hero-slide.active {
       opacity: 1;
-      animation: kenBurns 16s ease-out forwards
-    }
-
-    @keyframes kenBurns {
-      from {
-        transform: scale(1.04)
-      }
-
-      to {
-        transform: scale(1.14)
-      }
     }
 
     /* Layered overlay — photo visible in the centre, deep wine at edges. */
@@ -674,9 +662,9 @@
       z-index: 1;
       pointer-events: none;
       background:
-        radial-gradient(ellipse 55% 60% at 50% 52%, transparent 0%, rgba(45, 8, 16, .35) 55%, rgba(30, 8, 14, .82) 100%),
-        linear-gradient(180deg, rgba(30, 8, 14, .82) 0%, rgba(74, 15, 28, .15) 28%, rgba(74, 15, 28, .15) 72%, rgba(30, 8, 14, .9) 100%),
-        linear-gradient(90deg, rgba(45, 8, 16, .55) 0%, transparent 18%, transparent 82%, rgba(45, 8, 16, .55) 100%);
+        radial-gradient(ellipse 55% 60% at 50% 52%, transparent 0%, rgba(45, 8, 16, .18) 55%, rgba(30, 8, 14, .55) 100%),
+        linear-gradient(180deg, rgba(30, 8, 14, .55) 0%, rgba(74, 15, 28, .08) 28%, rgba(74, 15, 28, .08) 72%, rgba(30, 8, 14, .60) 100%),
+        linear-gradient(90deg, rgba(45, 8, 16, .30) 0%, transparent 18%, transparent 82%, rgba(45, 8, 16, .30) 100%);
     }
 
     .hero-slides::before {
@@ -685,7 +673,7 @@
       inset: 0;
       z-index: 1;
       pointer-events: none;
-      background: radial-gradient(ellipse at 50% 35%, rgba(122, 41, 53, .18), transparent 60%);
+      background: radial-gradient(ellipse at 50% 35%, rgba(122, 41, 53, .22), transparent 60%);
       mix-blend-mode: multiply;
     }
 
@@ -3885,7 +3873,7 @@
     <div class="nav-links nav-desktop nav-right">
       <a href="#gift">Gift</a>
       <span class="nav-sep">◆</span>
-      <a href="#hashtag">Hashtag</a>
+      <a href="#notes">Notes</a>
       <span class="nav-sep">◆</span>
       <a href="#rsvp">RSVP</a>
     </div>
@@ -3903,7 +3891,7 @@
     <a href="#dresscode" class="nmm-link" onclick="closeMobileNav()"><span class="nmm-num">02</span>Attire</a>
     <a href="#entourage" class="nmm-link" onclick="closeMobileNav()"><span class="nmm-num">03</span>Entourage</a>
     <a href="#rsvp" class="nmm-link" onclick="closeMobileNav()"><span class="nmm-num">04</span>RSVP</a>
-    <a href="#hashtag" class="nmm-link" onclick="closeMobileNav()"><span class="nmm-num">05</span>Hashtag</a>
+    <a href="#notes" class="nmm-link" onclick="closeMobileNav()"><span class="nmm-num">05</span>Notes</a>
     <div class="nmm-footer"><span class="nmm-monogram">M &amp; N</span></div>
   </div>
 
@@ -3912,9 +3900,10 @@
 ══════════════════════════════════════ -->
   <section id="hero">
     <div class="hero-slides">
-      <div class="hero-slide active" style="background-image:url('1.jpg')"></div>
-      <div class="hero-slide" data-bg="2.jpg"></div>
-      <div class="hero-slide" data-bg="3.jpg"></div>
+      <div class="hero-slide active" style="background-image:url('Prenup Raw-1152.jpg')"></div>
+      <div class="hero-slide" data-bg="SHN07944.jpg"></div>
+      <div class="hero-slide" data-bg="Prenup Raw-743.jpg"></div>
+      <div class="hero-slide" data-bg="SHN08136.jpg"></div>
     </div>
 
     <div class="hero-frame rv">
@@ -3997,6 +3986,10 @@
         <div class="gframe-hang"></div><img src="mt8.jpg" alt="Mara &amp; Nikku" class="pc-photo" loading="lazy">
         <div class="gframe-plate"><span>Mara &amp; Nikku</span></div>
       </div>
+      <div class="gframe land">
+        <div class="gframe-hang"></div><img src="mt9.jpg" alt="Mara &amp; Nikku" class="pc-photo" loading="lazy">
+        <div class="gframe-plate"><span>Mara &amp; Nikku</span></div>
+      </div>
       <!-- duplicate set for seamless marquee -->
       <div class="gframe land">
         <div class="gframe-hang"></div><img src="mt1.jpg" alt="" class="pc-photo" loading="lazy">
@@ -4028,6 +4021,10 @@
       </div>
       <div class="gframe land">
         <div class="gframe-hang"></div><img src="mt8.jpg" alt="" class="pc-photo" loading="lazy">
+        <div class="gframe-plate"><span>Mara &amp; Nikku</span></div>
+      </div>
+      <div class="gframe land">
+        <div class="gframe-hang"></div><img src="mt9.jpg" alt="Mara &amp; Nikku" class="pc-photo" loading="lazy">
         <div class="gframe-plate"><span>Mara &amp; Nikku</span></div>
       </div>
 
@@ -4279,7 +4276,7 @@
     <div class="attire-banner rv">
       <div class="ab-key">For our beloved guests</div>
       <div class="ab-body">
-        Olive tones, burgundy, dusty roses, wine reds, and champagne.<br>
+        Olive tones, burgundy, and wine reds.<br>
         <strong>Strictly no white, no denim.</strong>
       </div>
     </div>
@@ -4290,38 +4287,17 @@
         <div class="pw-petal" style="background:#572932;transform:translate(105px,0)" data-name="Wine"></div>
         <div class="pw-petal" style="background:#6B1F2A;transform:translate(74px,74px)" data-name="Merlot"></div>
         <div class="pw-petal" style="background:#4A0F1C;transform:translate(0,105px)" data-name="Burgundy"></div>
+        <div class="pw-petal" style="background:#6B1E2B;transform:translate(-105px,0)" data-name="Deep Berry"></div>
+        <div class="pw-petal" style="background:#550E12;transform:translate(-105px,0)" data-name="Classic Maroon"></div>
         <div class="pw-petal" style="background:#808000;transform:translate(-74px,74px)" data-name="Olive"></div>
         <div class="pw-petal" style="background:#8A9A5B;transform:translate(-105px,0)" data-name="Sage"></div>
-        <div class="pw-petal" style="background:#C8A86B;transform:translate(-74px,-74px)" data-name="Gold"></div>
-        <div class="pw-petal" style="background:#d4b896;transform:translate(0,-105px)" data-name="Beige"></div>
-        <div class="pw-petal" style="background:#4a5568;transform:translate(74px,-74px)" data-name="Slate"></div>
+        <div class="pw-petal" style="background:#3D5233;transform:translate(-105px,0)" data-name="Forest Green"></div>
+       
       </div>
       <div class="palette-side">
         <h3>Dress with the Vineyard</h3>
         <p>Picture late-afternoon sun through grapevines, the table set with wine in cut crystal, bouquets of olive
           branches and dusty roses. Choose any tone from the wheel — we promise the photos will glow.</p>
-        <div class="swatch-row">
-          <div class="sw">
-            <div class="sw-dot" style="background:#572932"></div>
-            <div class="sw-lbl">Wine</div>
-          </div>
-          <div class="sw">
-            <div class="sw-dot" style="background:#4A0F1C"></div>
-            <div class="sw-lbl">Burgundy</div>
-          </div>
-          <div class="sw">
-            <div class="sw-dot" style="background:#6B1F2A"></div>
-            <div class="sw-lbl">Merlot</div>
-          </div>
-          <div class="sw">
-            <div class="sw-dot" style="background:#808000"></div>
-            <div class="sw-lbl">Olive</div>
-          </div>
-          <div class="sw">
-            <div class="sw-dot" style="background:#8A9A5B"></div>
-            <div class="sw-lbl">Sage</div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -4492,27 +4468,27 @@
       </div>
       <div class="ent-grid-2">
         <div class="name-card rv d1">
-          <div class="nc-role">Candle</div>
+          <div class="nc-role">To Light our path</div>
           <div class="nc-names">Mr. Christopher Dalisay <span class="nc-amp">&amp;</span> Ms. Eloisa Dalisay</div>
         </div>
         <div class="name-card rv d2">
-          <div class="nc-role">Veil</div>
+          <div class="nc-role">To clothe us as one</div>
           <div class="nc-names">Ms. Eloisa Dalisay <span class="nc-amp">&amp;</span> Ms. Christmas Joy Arce</div>
         </div>
         <div class="name-card rv d3">
-          <div class="nc-role">Cord</div>
+          <div class="nc-role">To bind us togehter</div>
           <div class="nc-names">Mr. Rush Silo <span class="nc-amp">&amp;</span> Ms. Ella Jei Rubina</div>
         </div>
         <div class="name-card rv d4">
-          <div class="nc-role">Anchor</div>
+          <div class="nc-role">Love Anchor</div>
           <div class="nc-names">Lean Kate Dereza</div>
         </div>
         <div class="name-card rv d5">
-          <div class="nc-role">Bible</div>
+          <div class="nc-role">Faith Bearer</div>
           <div class="nc-names">Jillian Jimenez</div>
         </div>
         <div class="name-card rv d5">
-          <div class="nc-role">Coin</div>
+          <div class="nc-role">Coin Charmer</div>
           <div class="nc-names">Julia Pauline Bonifacio</div>
         </div>
         <div class="name-card rv d5 solo">
@@ -4573,47 +4549,10 @@
     </div>
   </section>
 
-  <!-- divider -->
-  <div class="divider-band">
-    <div class="dline"></div>
-    <div class="dstamp">❦</div>
-    <div class="dline"></div>
-  </div>
-
-  <!-- ══════════════════════════════════════
-     SECTION 9 · HASHTAG (wine bottle)
-══════════════════════════════════════ -->
-  <section id="hashtag" class="hashtag-section">
-    <div class="section-head">
-      <div class="eyebrow rv">Share the Joy</div>
-      <h2 class="rv">Our Vintage of Love</h2>
-      <div class="sub rv">Tag every photo so we can relive the day.</div>
-    </div>
-
-    <div class="bottle rv">
-      <div class="bottle-cap"></div>
-      <div class="bottle-neck"></div>
-      <div class="bottle-body">
-        <div class="bottle-label">
-          <div class="bl-vintage">Vintage 2026 · Reserve</div>
-          <div class="bl-script">Mara &amp; Nikku</div>
-          <div class="bl-tag">#Mara&Nikku2026</div>
-          <div class="bl-foot"> · Aged in love · </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="hashtag-body rv">
-      Once the ceremony concludes and we have officially tied the knot,<br>
-      capture every memory and share it with us.<br>
-      Please use our official hashtag when posting your photos.
-    </div>
-  </section>
-
   <!-- ══════════════════════════════════════
      SECTION 10 · NOTES (illuminated initials)
 ══════════════════════════════════════ -->
-  <section class="notes-section">
+  <section id="notes" class="notes-section">
     <div class="section-head">
       <div class="eyebrow rv">Please Note</div>
       <h2 class="rv">Kindly Remember</h2>
@@ -4633,6 +4572,20 @@
         <h4>Dress Code</h4>
         <p>Strictly no white and no denim. Please wear shades within our Red wine palette — wine, sage, olive,
           and champagne.</p>
+        <div class="nf">~</div>
+      </div>
+       <div class="note-pillar rv d3">
+        <div class="note-initial">C</div>
+        <h4>Can i bring plus one?</h4>
+        <p>Due to space and seating constraints, we kindly ask that only the people listed on the invitation
+           be present to ensure every guest has a comfortable experience.</p>
+        <div class="nf">~</div>
+      </div>
+      <div class="note-pillar rv d4">
+        <div class="note-initial">P</div>
+        <h4>Privacy Notice</h4>
+        <p>This is a small and intimate wedding. We kindly ask you to refrain from spreading our invitation. 
+          Only the person closest to us will be in attendance to our exchange of vows.</p>
         <div class="nf">~</div>
       </div>
     </div>
@@ -4655,7 +4608,7 @@
         <h2 class="rv">Kindly Respond</h2>
         <div class="sub rv">Your seat at our table awaits.</div>
       </div>
-      <p class="rsvp-deadline rv">Please respond by <strong>May 8, 2026</strong></p>
+      <p class="rsvp-deadline rv">Please respond by <strong>June 18, 2026</strong></p>
 
       <div class="rsvp-frame rv">
         <div class="rsvp-inner">
@@ -4691,7 +4644,7 @@
           <div class="rsvp-key">~ Your Reply ~</div>
           <div class="rsvp-title">RSVP</div>
           <div class="rsvp-gform-wrap">
-            <iframe src="">Loading…</iframe>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfoLpjlpZAGPQCK041LIRTfn4aSVQDt99bWw0ogI1mrK_RaXA/viewform?embedded=true" width="640" height="680" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
           </div>
         </div>
       </div>
