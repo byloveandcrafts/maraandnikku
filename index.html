@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mara &amp; Nikku — July 18, 2026</title>
-  <link rel="preload" as="image" href="1.jpg" />
+  <link rel="preload" as="image" href="Prenup Raw-1152.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="photo.png" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -2024,10 +2025,11 @@
     .attire-panel {
       background: var(--ivory-soft);
       border: 1px solid rgba(87, 41, 50, .18);
-      padding: 36px 30px 32px;
+      padding: 36px 30px 0;
       text-align: center;
       position: relative;
       box-shadow: 0 6px 22px var(--shadow-soft);
+      overflow: hidden;
     }
 
     .attire-panel::before {
@@ -2108,6 +2110,22 @@
       text-transform: uppercase;
       color: var(--mute);
       white-space: nowrap;
+    }
+
+    /* Attire guide photo — full-bleed below swatches */
+    .ap-photo {
+      display: block;
+      width: calc(100% + 60px);
+      margin-left: -30px;
+      margin-right: -30px;
+      margin-bottom: 0;
+      margin-top: 20px;
+      height: 240px;
+      object-fit: contain;
+      object-position: center bottom;
+      background: linear-gradient(180deg, var(--ivory-soft) 0%, var(--linen) 100%);
+      border-top: 1px solid rgba(200, 168, 107, .25);
+      flex-shrink: 0;
     }
 
     .attire-banner {
@@ -3705,9 +3723,141 @@
       transition-delay: .5s
     }
 
-    /* ════════════════════════════════════════════════════════
-   RESPONSIVE
-═══════════════════════════════════════════════════════ */
+    /* ════ IMAGE PERFORMANCE ════ */
+    .hero-slide {
+      will-change: opacity;
+      backface-visibility: hidden;
+    }
+    img[loading="lazy"] {
+      content-visibility: auto;
+    }
+    .gframe .pc-photo {
+      decoding: async;
+    }
+    /* Envelope photo placeholder */
+    .env-photo-wrap {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      right: 8px;
+      height: 70px;
+      overflow: hidden;
+      z-index: 2;
+    }
+    .env-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: 0.55;
+      filter: sepia(0.3);
+    }
+    /* Nav photo monogram */
+    .nav-photo-monogram {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1.5px solid rgba(200,168,107,.65);
+      box-shadow: 0 2px 10px rgba(0,0,0,.45);
+      flex-shrink: 0;
+      cursor: default;
+    }
+    .nav-photo-monogram img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    /* Mobile nav photo */
+    .nav-mobile-photo {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1.5px solid rgba(200,168,107,.6);
+      box-shadow: 0 2px 8px rgba(0,0,0,.4);
+      flex-shrink: 0;
+    }
+    .nav-mobile-photo img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    /* Hero photo monogram */
+    .hero-crest-photo {
+      position: relative;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      margin-bottom: 18px;
+      overflow: hidden;
+      border: 2px solid rgba(200,168,107,.65);
+      box-shadow:
+        0 8px 22px rgba(0,0,0,.55),
+        0 0 18px rgba(232,193,90,.35);
+      flex-shrink: 0;
+    }
+    .hero-crest-photo img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .hero-crest-photo::after {
+      content: '';
+      position: absolute;
+      inset: -8px;
+      border-radius: 50%;
+      border: 1px solid rgba(200,168,107,.45);
+      pointer-events: none;
+    }
+    @media(max-width:480px) {
+      .hero-crest-photo { width: 54px; height: 54px; margin-bottom: 14px; }
+    }
+    /* Attire panel photo */
+    .ap-photo {
+      display: block;
+      width: calc(100% + 60px);
+      margin-left: -30px;
+      margin-right: -30px;
+      margin-bottom: 0;
+      margin-top: 20px;
+      height: 240px;
+      object-fit: contain;
+      object-position: center bottom;
+      background: linear-gradient(180deg, var(--ivory-soft) 0%, var(--linen) 100%);
+      border-top: 1px solid rgba(200, 168, 107, .25);
+    }
+    .ap-photo img {
+      width: 100%; height: 100%; object-fit: contain; display: block;
+      filter: saturate(.9) contrast(.95);
+    }
+    .ap-photo-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--ivory) 0%, var(--linen) 100%);
+      gap: 8px;
+      font-family: 'Cinzel', serif;
+      font-size: 7px;
+      letter-spacing: .3em;
+      color: rgba(87,41,50,.4);
+      text-transform: uppercase;
+    }
+    .ap-photo-placeholder svg { opacity: .28; }
+    /* Footer photo monogram */
+    .footer-photo-monogram {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid rgba(200,168,107,.5);
+      box-shadow: 0 6px 22px rgba(0,0,0,.35);
+      margin: 0 auto 18px;
+    }
+    .footer-photo-monogram img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+
     @media(max-width:900px) {
       nav {
         padding: 0 20px;
@@ -3741,6 +3891,10 @@
         grid-template-columns: 1fr
       }
 
+      .ap-photo {
+        height: 200px;
+      }
+
       .parents-row {
         gap: 18px
       }
@@ -3749,6 +3903,10 @@
     @media(max-width:480px) {
       #hero {
         padding: 78px 16px 80px
+      }
+
+      .ap-photo {
+        height: 180px;
       }
 
       .hero-frame {
@@ -3856,7 +4014,7 @@
     <div class="magic-envelope">
       <div class="env-body"></div>
       <div class="env-flap"></div>
-      <div class="env-wax">M&amp;N</div>
+      <div class="env-wax"><img src="mono.png" alt="Mara &amp; Nikku" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
     </div>
     <div class="env-open-hint">Tap to Open</div>
   </div>
@@ -3885,7 +4043,9 @@
       <a href="#entourage">Entourage</a>
     </div>
     <div class="nav-center">
-      <div class="nav-monogram">M &amp; N</div>
+      <div class="nav-photo-monogram">
+        <img src="mono.png" alt="Mara &amp; Nikku" loading="eager" decoding="async">
+      </div>
     </div>
     <div class="nav-links nav-desktop nav-right">
       <a href="#gift">Gift</a>
@@ -3895,7 +4055,7 @@
       <a href="#rsvp">RSVP</a>
     </div>
     <div class="nav-mobile">
-      <span class="nav-mobile-monogram">M &amp; N</span>
+      <div class="nav-mobile-photo"><img src="mono.png" alt="M &amp; N" loading="eager" decoding="async"></div>
       <button class="nav-flower-btn" id="navFlowerBtn" aria-label="Open menu" aria-expanded="false">
         <span class="hb-line"></span>
         <span class="hb-line"></span>
@@ -3926,14 +4086,16 @@
     <div class="hero-frame rv">
       <div class="hero-corners"><span></span><span></span><span></span><span></span></div>
 
-      <div class="hero-crest">M&amp;N</div>
+      <div class="hero-crest-photo">
+        <img src="mono.png" alt="Mara &amp; Nikku" loading="eager" decoding="async">
+      </div>
 
       <div class="hero-eyebrow">Together with their families</div>
 
       <div class="hero-names">
         <span class="hero-name left">Mara</span>
         <span class="hero-amp"><span class="amp-glyph">&amp;</span></span>
-        <span class="hero-name right">Nikku</span>
+        <span class="hero-name right" style="margin-top:.18em">Nikku</span>
       </div>
 
       <div class="hero-date">
@@ -4228,6 +4390,7 @@
             <div class="ap-lbl">Cream</div>
           </div>
         </div>
+        <img src="ninong.png" alt="Ninong Attire Guide" class="ap-photo" loading="lazy" decoding="async">
       </div>
       <div class="attire-panel rv d2">
         <div class="ap-tag">Ninang</div>
@@ -4243,6 +4406,7 @@
             <div class="ap-lbl">Olive Green</div>
           </div>
         </div>
+        <img src="ninang.png" alt="Ninang Attire Guide" class="ap-photo" loading="lazy" decoding="async">
       </div>
       <div class="attire-panel rv d3">
         <div class="ap-tag">Bridesmaids</div>
@@ -4258,6 +4422,7 @@
             <div class="ap-lbl">Deep Wine</div>
           </div>
         </div>
+        <img src="bridemaids.png" alt="Bridesmaids Attire Guide" class="ap-photo" loading="lazy" decoding="async">
       </div>
       <div class="attire-panel rv d4">
         <div class="ap-tag">Groomsmen</div>
@@ -4285,6 +4450,7 @@
             <div class="ap-lbl">Brown</div>
           </div>
         </div>
+        <img src="groomsmen.png" alt="Groomsmen Attire Guide" class="ap-photo" loading="lazy" decoding="async">
       </div>
     </div>
 
@@ -4670,7 +4836,10 @@
      FOOTER
 ══════════════════════════════════════ -->
   <footer>
-    <div class="footer-monogram">M &amp; N</div>
+    <div class="footer-photo-monogram">
+      <img src="mono.png" alt="Mara &amp; Nikku" loading="lazy" decoding="async">
+    </div>
+    <div class="footer-monogram" style="display:none">M &amp; N</div>
     <div class="footer-script">Mara &amp; Nikku</div>
     <div class="footer-date">18 · July · 2026 · Sta. Cruz</div>
     <div class="footer-rule">
