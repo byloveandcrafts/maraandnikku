@@ -7,6 +7,8 @@
   <title>Mara &amp; Nikku — July 18, 2026</title>
   <link rel="preload" as="image" href="Prenup Raw-1152.jpg" fetchpriority="high" />
   <link rel="preload" as="image" href="photo.png" fetchpriority="high" />
+  <link rel="preload" as="image" href="SHN07944.jpg" fetchpriority="low" />
+  <link rel="preload" as="image" href="mono.png" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -3727,12 +3729,17 @@
     .hero-slide {
       will-change: opacity;
       backface-visibility: hidden;
+      transform: translateZ(0);
     }
-    img[loading="lazy"] {
-      content-visibility: auto;
+    .strip-track {
+      contain: layout style;
     }
     .gframe .pc-photo {
-      decoding: async;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+    }
+    .gallery-section {
+      contain: layout;
     }
     /* Envelope photo placeholder */
     .env-photo-wrap {
@@ -4134,76 +4141,76 @@
     </div>
     <div class="strip-track go-left" id="strip-land">
       <div class="gframe land">
-        <div class="gframe-hang"></div><img src="mt1.jpg" alt="Mara &amp; Nikku" class="pc-photo" loading="lazy">
+        <div class="gframe-hang"></div><img src="mt1.jpg" alt="Mara &amp; Nikku" class="pc-photo" loading="lazy" decoding="async">
         <div class="gframe-plate"><span>Mara &amp; Nikku</span></div>
       </div>
       <div class="gframe land">
-        <div class="gframe-hang"></div><img src="mt2.jpg" alt="Mara &amp; Nikku" class="pc-photo" loading="lazy">
+        <div class="gframe-hang"></div><img src="mt2.jpg" alt="Mara &amp; Nikku" class="pc-photo" loading="lazy" decoding="async">
         <div class="gframe-plate"><span>Mara &amp; Nikku</span></div>
       </div>
       <div class="gframe land">
-        <div class="gframe-hang"></div><img src="mt3.jpg" alt="Mara &amp; Nikku" class="pc-photo" loading="lazy">
+        <div class="gframe-hang"></div><img src="mt3.jpg" alt="Mara &amp; Nikku" class="pc-photo" loading="lazy" decoding="async">
         <div class="gframe-plate"><span>Mara &amp; Nikku</span></div>
       </div>
       <div class="gframe land">
-        <div class="gframe-hang"></div><img src="mt4.jpg" alt="Mara &amp; Nikku" class="pc-photo" loading="lazy">
+        <div class="gframe-hang"></div><img src="mt4.jpg" alt="Mara &amp; Nikku" class="pc-photo" loading="lazy" decoding="async">
         <div class="gframe-plate"><span>Mara &amp; Nikku</span></div>
       </div>
       <div class="gframe land">
-        <div class="gframe-hang"></div><img src="mt5.jpg" alt="Mara &amp; Nikku" class="pc-photo" loading="lazy">
+        <div class="gframe-hang"></div><img src="mt5.jpg" alt="Mara &amp; Nikku" class="pc-photo" loading="lazy" decoding="async">
         <div class="gframe-plate"><span>Mara &amp; Nikku</span></div>
       </div>
       <div class="gframe land">
-        <div class="gframe-hang"></div><img src="mt6.jpg" alt="Mara &amp; Nikku" class="pc-photo" loading="lazy">
+        <div class="gframe-hang"></div><img src="mt6.jpg" alt="Mara &amp; Nikku" class="pc-photo" loading="lazy" decoding="async">
         <div class="gframe-plate"><span>Mara &amp; Nikku</span></div>
       </div>
       <div class="gframe land">
-        <div class="gframe-hang"></div><img src="mt7.jpg" alt="Mara &amp; Nikku" class="pc-photo" loading="lazy">
+        <div class="gframe-hang"></div><img src="mt7.jpg" alt="Mara &amp; Nikku" class="pc-photo" loading="lazy" decoding="async">
         <div class="gframe-plate"><span>Mara &amp; Nikku</span></div>
       </div>
       <div class="gframe land">
-        <div class="gframe-hang"></div><img src="mt8.jpg" alt="Mara &amp; Nikku" class="pc-photo" loading="lazy">
+        <div class="gframe-hang"></div><img src="mt8.jpg" alt="Mara &amp; Nikku" class="pc-photo" loading="lazy" decoding="async">
         <div class="gframe-plate"><span>Mara &amp; Nikku</span></div>
       </div>
       <div class="gframe land">
-        <div class="gframe-hang"></div><img src="mt9.jpg" alt="Mara &amp; Nikku" class="pc-photo" loading="lazy">
+        <div class="gframe-hang"></div><img src="mt9.jpg" alt="Mara &amp; Nikku" class="pc-photo" loading="lazy" decoding="async">
         <div class="gframe-plate"><span>Mara &amp; Nikku</span></div>
       </div>
       <!-- duplicate set for seamless marquee -->
       <div class="gframe land">
-        <div class="gframe-hang"></div><img src="mt1.jpg" alt="" class="pc-photo" loading="lazy">
+        <div class="gframe-hang"></div><img src="mt1.jpg" alt="" class="pc-photo" loading="lazy" decoding="async">
         <div class="gframe-plate"><span>Mara &amp; Nikku</span></div>
       </div>
       <div class="gframe land">
-        <div class="gframe-hang"></div><img src="mt2.jpg" alt="" class="pc-photo" loading="lazy">
+        <div class="gframe-hang"></div><img src="mt2.jpg" alt="" class="pc-photo" loading="lazy" decoding="async">
         <div class="gframe-plate"><span>Mara &amp; Nikku</span></div>
       </div>
       <div class="gframe land">
-        <div class="gframe-hang"></div><img src="mt3.jpg" alt="" class="pc-photo" loading="lazy">
+        <div class="gframe-hang"></div><img src="mt3.jpg" alt="" class="pc-photo" loading="lazy" decoding="async">
         <div class="gframe-plate"><span>Mara &amp; Nikku</span></div>
       </div>
       <div class="gframe land">
-        <div class="gframe-hang"></div><img src="mt4.jpg" alt="" class="pc-photo" loading="lazy">
+        <div class="gframe-hang"></div><img src="mt4.jpg" alt="" class="pc-photo" loading="lazy" decoding="async">
         <div class="gframe-plate"><span>Mara &amp; Nikku</span></div>
       </div>
       <div class="gframe land">
-        <div class="gframe-hang"></div><img src="mt5.jpg" alt="" class="pc-photo" loading="lazy">
+        <div class="gframe-hang"></div><img src="mt5.jpg" alt="" class="pc-photo" loading="lazy" decoding="async">
         <div class="gframe-plate"><span>Mara &amp; Nikku</span></div>
       </div>
       <div class="gframe land">
-        <div class="gframe-hang"></div><img src="mt6.jpg" alt="" class="pc-photo" loading="lazy">
+        <div class="gframe-hang"></div><img src="mt6.jpg" alt="" class="pc-photo" loading="lazy" decoding="async">
         <div class="gframe-plate"><span>Mara &amp; Nikku</span></div>
       </div>
       <div class="gframe land">
-        <div class="gframe-hang"></div><img src="mt7.jpg" alt="" class="pc-photo" loading="lazy">
+        <div class="gframe-hang"></div><img src="mt7.jpg" alt="" class="pc-photo" loading="lazy" decoding="async">
         <div class="gframe-plate"><span>Mara &amp; Nikku</span></div>
       </div>
       <div class="gframe land">
-        <div class="gframe-hang"></div><img src="mt8.jpg" alt="" class="pc-photo" loading="lazy">
+        <div class="gframe-hang"></div><img src="mt8.jpg" alt="" class="pc-photo" loading="lazy" decoding="async">
         <div class="gframe-plate"><span>Mara &amp; Nikku</span></div>
       </div>
       <div class="gframe land">
-        <div class="gframe-hang"></div><img src="mt9.jpg" alt="Mara &amp; Nikku" class="pc-photo" loading="lazy">
+        <div class="gframe-hang"></div><img src="mt9.jpg" alt="Mara &amp; Nikku" class="pc-photo" loading="lazy" decoding="async">
         <div class="gframe-plate"><span>Mara &amp; Nikku</span></div>
       </div>
 
@@ -4913,14 +4920,33 @@
       const slides = document.querySelectorAll('.hero-slide');
       if (!slides.length) return;
       let cur = 0;
-      function loadSlide(s) { const b = s.getAttribute('data-bg'); if (b) { s.style.backgroundImage = "url('" + b + "')"; s.removeAttribute('data-bg') } }
-      function preloadNext() { loadSlide(slides[(cur + 1) % slides.length]) }
-      preloadNext();
+      /* Cache: preload image into browser cache before setting on slide */
+      const cache = {};
+      function preloadImg(url, cb) {
+        if (cache[url]) { cb && cb(); return; }
+        const img = new Image();
+        img.onload = img.onerror = function () { cache[url] = true; cb && cb(); };
+        img.src = url;
+      }
+      function loadSlide(s) {
+        const b = s.getAttribute('data-bg');
+        if (b) {
+          preloadImg(b, function () {
+            s.style.backgroundImage = "url('" + b + "')";
+            s.removeAttribute('data-bg');
+          });
+        }
+      }
+      /* Preload next two slides at start */
+      loadSlide(slides[1 % slides.length]);
+      loadSlide(slides[2 % slides.length]);
       setInterval(function () {
         slides[cur].classList.remove('active');
         cur = (cur + 1) % slides.length;
         slides[cur].classList.add('active');
-        preloadNext();
+        /* Preload the one after next */
+        loadSlide(slides[(cur + 1) % slides.length]);
+        loadSlide(slides[(cur + 2) % slides.length]);
       }, 5000);
     })();
 
@@ -4962,12 +4988,27 @@
       document.querySelectorAll('.strip-track').forEach(function (track) {
         var orig = Array.from(track.children);
         if (!orig.length) return;
+        /* Decode originals async so they don't block paint */
+        orig.forEach(function (card) {
+          card.querySelectorAll('img').forEach(function (img) { img.decoding = 'async'; });
+        });
         function fill() {
           track.querySelectorAll('.strip-clone').forEach(function (el) { el.remove() });
           var w = orig.reduce(function (s, el) { return s + el.offsetWidth + 24 }, 0);
           if (w === 0) { setTimeout(fill, 150); return }
           var copies = Math.max(Math.ceil((window.innerWidth * 3) / w), 2);
-          for (var c = 0; c < copies; c++) { orig.forEach(function (card) { var cl = card.cloneNode(true); cl.classList.add('strip-clone'); track.appendChild(cl) }) }
+          for (var c = 0; c < copies; c++) {
+            orig.forEach(function (card) {
+              var cl = card.cloneNode(true);
+              cl.classList.add('strip-clone');
+              /* Cloned images must be eager — lazy would stall mid-scroll */
+              cl.querySelectorAll('img').forEach(function (img) {
+                img.loading = 'eager';
+                img.decoding = 'async';
+              });
+              track.appendChild(cl);
+            });
+          }
         }
         requestAnimationFrame(function () { setTimeout(fill, 120) });
         window.addEventListener('resize', fill);
